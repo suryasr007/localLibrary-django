@@ -32,4 +32,8 @@ urlpatterns += [
     #RedirectView.as_view() is used to map localhost:8000/catalog to localhost:8000
 ]
 
+urlpatterns +=[
+    url(r'^catalog/',include('catalog.urls')),
+]
+
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
